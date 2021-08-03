@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+// THIS CONTAINS THE STRUCTURE FOR COMPONENTS TO BE USED
+import React, { Suspense } from 'react';
+// import { Canvas, useFrame, useLoader } from '@react-three/fiber';
+// import * as THREE from 'three';
 import './App.css';
+import AnimationCanvas from './components/AnimationCanvas'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div id='app'>
+        <h1>ENTRY-10:React/Three-Template</h1>
+        <Suspense fallback={<div>Loading...</div>}>
+          <AnimationCanvas />
+        </Suspense>
+      </div>
   );
 }
 
 export default App;
+
+
